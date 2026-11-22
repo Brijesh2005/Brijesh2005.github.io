@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brijesh Vishwakarma | Full Stack Developer &amp; AI/ML Engineer</title>
+  <meta name="description" content="Portfolio of Brijesh Vishwakarma - Full Stack Developer & AI/ML Engineer specializing in MERN stack, PyTorch deep learning, and geospatial architectures.">
+  <meta name="keywords" content="Brijesh Vishwakarma, Software Engineer, Full Stack Developer, MERN, PyTorch, React, Node.js, AI, Machine Learning, Portfolio">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme" data-accent="indigo">
+  <!-- Interactive Cursor Glow Spotlight -->
+  <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  <!-- Announcement / Status Bar -->
+  <aside class="top-status-bar" aria-label="Availability banner">
+    <div class="container status-inner">
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        <span class="status-text">Available for Software Engineering Internships &amp; Full-Time Roles (2026&ndash;2027)</span>
+      </div>
+      <div class="status-right-info">
+        <span class="ist-clock-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span id="liveClockIST">IST (UTC+5:30)</span>
+        </span>
+        <a href="#contact" class="status-cta">Get In Touch &rarr;</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Brijesh Vishwakarma Home">
+        <span class="logo-box">BV</span>
+        <span class="logo-name">Brijesh<span class="logo-accent">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Interactive Theme Palette Picker -->
+        <div class="accent-palette-picker" title="Switch Theme Color Accent">
+          <button class="palette-swatch indigo active" data-accent="indigo" title="Electric Indigo Accent"></button>
+          <button class="palette-swatch emerald" data-accent="emerald" title="Clean Emerald Accent"></button>
+          <button class="palette-swatch cyan" data-accent="cyan" title="Ocean Cyan Accent"></button>
+          <button class="palette-swatch amber" data-accent="amber" title="Sunset Amber Accent"></button>
+        </div>
+
+        <!-- Audio FX Toggle (Satisfying subtle clicks) -->
+        <button class="sound-toggle-btn" id="soundToggleBtn" title="Toggle UI Sound Effects (Muted by default)" aria-label="Toggle audio effects">
+          <svg class="sound-off-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+          <svg class="sound-on-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        </button>
+
+        <!-- Quick Resume Modal Trigger -->
+        <button class="resume-pill-btn" id="openResumeModalBtn" title="View Quick Resume Summary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>CV</span>
+        </button>
+
+        <!-- Interactive Terminal Pill Button -->
+        <button class="terminal-trigger-btn" id="openTerminalBtn" title="Open Interactive Terminal" aria-label="Open Interactive Terminal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+          <span>CLI</span>
+        </button>
+
+        <!-- Light/Dark Mode Switcher -->
+        <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme mode">
+          <svg class="sun-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <!-- Interactive Background Canvas Particles -->
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-ambient-glow glow-1"></div>
+    <div class="hero-ambient-glow glow-2"></div>
+    <div class="hero-ambient-glow glow-3"></div>
+
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="badge-pill hero-badge">
+          <span class="badge-icon">⚡</span>
+          <span>Full Stack Developer &middot; AI/ML Practitioner</span>
+        </div>
+
+        <h1 class="hero-title">
+          Engineering Smart Web Systems with 
+          <span class="gradient-text text-rotator" id="roleRotator">Modern Code</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Hi, I'm <strong class="highlight-name">Brijesh Vishwakarma</strong> &mdash; a Computer Science Engineering student bridging 
+          <strong>MERN-stack architectures</strong>, <strong>deep learning inference</strong>, and <strong>geospatial database systems</strong>. 
+          Experienced in taking ideas from raw datasets to production-ready, mission-critical applications.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub Repos</span>
+          </a>
+          <button class="btn btn-outline" id="copyEmailHeroBtn" title="Copy email address to clipboard">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span class="btn-text">Copy Email</span>
+          </button>
+        </div>
+
+        <!-- Social Proof & Quick Tech Pill Highlights -->
+        <div class="hero-tech-strip">
+          <span class="strip-label">Core Tech:</span>
+          <div class="strip-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">MongoDB Geospatial</span>
+            <span class="tag">Express</span>
+            <span class="tag">Socket.IO</span>
+            <span class="tag">Flask</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Interactive Card -->
+      <div class="hero-right">
+        <div class="hero-glass-card" id="heroInteractiveCard">
+          <div class="card-glass-header">
+            <div class="window-controls">
+              <span class="win-btn red"></span>
+              <span class="win-btn yellow"></span>
+              <span class="win-btn green"></span>
+            </div>
+            <span class="window-title">engineer-profile.ts</span>
+            <span class="window-status">Live</span>
+          </div>
+          <div class="card-glass-body">
+            <pre class="code-preview"><code><span class="keyword">const</span> <span class="var-name">engineer</span> = {
+  <span class="prop">name</span>: <span class="string">"Brijesh Vishwakarma"</span>,
+  <span class="prop">currentEducation</span>: <span class="string">"B.E. CSE @ Sahyadri"</span>,
+  <span class="prop">cumulativeCGPA</span>: <span class="number">8.23</span>,
+  <span class="prop">internship</span>: <span class="string">"CodeLab Systems (16 wks)"</span>,
+  <span class="prop">focusAreas</span>: [
+    <span class="string">"Full-Stack MERN"</span>,
+    <span class="string">"Deep Learning (ResNet/CNN)"</span>,
+    <span class="string">"Geospatial Alert Architectures"</span>,
+    <span class="string">"Crop Yield &amp; Earth Data"</span>
+  ],
+  <span class="prop">openTo</span>: <span class="string">"Internships &amp; SDE Roles"</span>
+};</code></pre>
+
+            <div class="card-metric-grid">
+              <div class="metric-item">
+                <span class="metric-val counter" data-target="4">0</span>
+                <span class="metric-label">Shipped Projects</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">16<small>wks</small></span>
+                <span class="metric-label">Full Stack Internship</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">8.23</span>
+                <span class="metric-label">B.E. Cumulative CGPA</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">10.0</span>
+                <span class="metric-label">Capstone SGPA (A+)</span>
+              </div>
+            </div>
+
+            <div class="interactive-card-footer">
+              <div class="loc-indicator">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Puttur / Mangaluru, Karnataka, India</span>
+              </div>
+              <a href="#projects" class="live-pulse-action">
+                <span>View Shipped Repos</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infinite Tech Stack Marquee (New Enhancement) -->
+  <div class="tech-marquee-wrapper" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="m-icon">⚛️</span> React.js</div>
+      <div class="marquee-item"><span class="m-icon">🟢</span> Node.js</div>
+      <div class="marquee-item"><span class="m-icon">🐍</span> Python</div>
+      <div class="marquee-item"><span class="m-icon">🔥</span> PyTorch</div>
+      <div class="marquee-item"><span class="m-icon">🍃</span> MongoDB Geospatial</div>
+      <div class="marquee-item"><span class="m-icon">⚡</span> Express.js</div>
+      <div class="marquee-item"><span class="m-icon">🌐</span> Socket.IO WebSockets</div>
+      <div class="marquee-item"><span class="m-icon">🧠</span> ResNet-50 CNN</div>
+      <div class="marquee-item"><span class="m-icon">🛰️</span> Sentinel-2 GIS</div>
+      <div class="marquee-item"><span class="m-icon">🏛️</span> Oracle Database</div>
+      <div class="marquee-item"><span class="m-icon">🐬</span> MySQL</div>
+      <div class="marquee-item"><span class="m-icon">🧪</span> Flask REST</div>
+      <div class="marquee-item"><span class="m-icon">🐙</span> Git &amp; GitHub</div>
+      <div class="marquee-item"><span class="m-icon">☁️</span> IBM &amp; Azure Cloud</div>
+      <!-- Duplicate items for seamless loop -->
+      <div class="marquee-item"><span class="m-icon">⚛️</span> React.js</div>
+      <div class="marquee-item"><span class="m-icon">🟢</span> Node.js</div>
+      <div class="marquee-item"><span class="m-icon">🐍</span> Python</div>
+      <div class="marquee-item"><span class="m-icon">🔥</span> PyTorch</div>
+      <div class="marquee-item"><span class="m-icon">🍃</span> MongoDB Geospatial</div>
+      <div class="marquee-item"><span class="m-icon">⚡</span> Express.js</div>
+      <div class="marquee-item"><span class="m-icon">🌐</span> Socket.IO WebSockets</div>
+      <div class="marquee-item"><span class="m-icon">🧠</span> ResNet-50 CNN</div>
+      <div class="marquee-item"><span class="m-icon">🛰️</span> Sentinel-2 GIS</div>
+      <div class="marquee-item"><span class="m-icon">🏛️</span> Oracle Database</div>
+      <div class="marquee-item"><span class="m-icon">🐬</span> MySQL</div>
+      <div class="marquee-item"><span class="m-icon">🧪</span> Flask REST</div>
+      <div class="marquee-item"><span class="m-icon">🐙</span> Git &amp; GitHub</div>
+      <div class="marquee-item"><span class="m-icon">☁️</span> IBM &amp; Azure Cloud</div>
+    </div>
+  </div>
+
+  <!-- About & Value Proposition Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">Bridging Full Stack Precision &amp; Machine Intelligence</h2>
+        <p class="section-desc">
+          I am a passionate software developer motivated by creating robust, high-impact applications that solve tangible problems &mdash; 
+          from disaster safety mapping and sustainable water management to precision agriculture powered by satellite intelligence.
+        </p>
+      </div>
+
+      <div class="about-bento-grid">
+        <!-- Bento 1: Core Philosophy -->
+        <div class="bento-card bento-wide">
+          <div class="bento-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></polygon></svg>
+          </div>
+          <h3>End-to-End Engineering Philosophy</h3>
+          <p>
+            Whether it's orchestrating real-time WebSockets with Socket.IO, architecting MongoDB geospatial indexing, 
+            or writing REST endpoints that serve PyTorch deep learning weights in real-time, I thrive on owning features from data modeling 
+            to clean, interactive React UI components.
+          </p>
+          <div class="bento-tags">
+            <span>MERN Full-Stack</span>
+            <span>RESTful Microservices</span>
+            <span>Real-Time WebSockets</span>
+            <span>Geospatial 2dsphere</span>
+          </div>
+        </div>
+
+        <!-- Bento 2: Academic Excellence -->
+        <div class="bento-card">
+          <div class="bento-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+          <h3>Strong Academic Rigor</h3>
+          <p>
+            B.E. in CSE at Sahyadri College of Engineering (CGPA 8.23). Consistently maintained &gt;8.0 CGPA every semester, 
+            earned Grade O (top grade) in B.E. Mini-Project and UI/UX Design, following a Distinction Diploma with a perfect 10.0 SGPA in the final capstone semester.
+          </p>
+        </div>
+
+        <!-- Bento 3: Industry Experience -->
+        <div class="bento-card">
+          <div class="bento-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <h3>Practical Internship Impact</h3>
+          <p>
+            Completed a rigorous 16-week Full Stack Development Internship at CodeLab Systems. Contributed across frontend and 
+            backend workflows, API integrations, and component scalability commended for significant contribution and commitment.
+          </p>
+        </div>
+
+        <!-- Bento 4: AI & Earth Observation -->
+        <div class="bento-card bento-wide">
+          <div class="bento-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          </div>
+          <h3>Applied Machine Learning &amp; Satellite GIS</h3>
+          <p>
+            Passionate about bringing computer vision and Earth observation data to life. Experienced in processing Sentinel-2 multispectral 
+            satellite imagery, training deep convolutional networks (ResNet-50) for rapid inference, and integrating AI microservices into intuitive web dashboards.
+          </p>
+          <div class="bento-tags">
+            <span>PyTorch &amp; CNNs</span>
+            <span>Sentinel-2 Satellite Imagery</span>
+            <span>Computer Vision</span>
+            <span>GIS Enrichment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section (Centerpiece using Github projects) -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Featured Repositories</div>
+        <h2 class="section-title">Engineered to Solve Real-World Challenges</h2>
+        <p class="section-desc">
+          Four production-grade systems crafted with clean code, modern architecture, and end-to-end integration. 
+          Click on any project to explore its architecture, toggle between code and live preview, and launch interactive live simulations.
+        </p>
+
+        <!-- Project Filter Controls -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects (4)</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack MERN</button>
+          <button class="filter-btn" data-filter="aiml">AI &amp; Deep Learning</button>
+          <button class="filter-btn" data-filter="geospatial">Geospatial &amp; Cloud</button>
+        </div>
+      </div>
+
+      <!-- Project Showcase Cards Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1: Sentinel Watch -->
+        <article class="project-card" data-category="fullstack geospatial" data-project="sentinel-watch">
+          <div class="project-card-header">
+            <div class="project-type-tag">Disaster Response &amp; Geospatial</div>
+            <div class="project-header-actions">
+              <div class="project-view-toggler">
+                <button class="view-tab-btn active" data-view="preview">Preview</button>
+                <button class="view-tab-btn" data-view="code">Code</button>
+              </div>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub" aria-label="Sentinel Watch on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive View Container: Preview View -->
+          <div class="project-visual-preview sentinel-theme view-content-preview">
+            <div class="mock-ui-bar">
+              <span class="status-indicator-badge live-blink">LIVE ALERTS ACTIVE</span>
+              <span class="geo-tag">2dsphere Query: radius &lt; 15km</span>
+            </div>
+            <div class="mock-interactive-map">
+              <div class="map-grid-lines"></div>
+              <div class="incident-pin pin-1 pulse-ring" title="Flash Flood Alert: Sector 4">
+                <span class="pin-symbol">🌊</span>
+                <span class="pin-tooltip">Flash Flood Alert</span>
+              </div>
+              <div class="incident-pin pin-2" title="Landslide Warning: Hill Pass">
+                <span class="pin-symbol">⚠️</span>
+                <span class="pin-tooltip">Landslide Risk</span>
+              </div>
+              <div class="incident-pin pin-safe" title="Safe Shelter Route Open">
+                <span class="pin-symbol">🛡️</span>
+                <span class="pin-tooltip">Evacuation Node</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code View Tab -->
+          <div class="project-code-preview view-content-code" style="display:none;">
+            <pre class="code-box"><code><span class="code-comment">// Geospatial Incident Radius Query</span>
+IncidentSchema.index({ location: <span class="string">"2dsphere"</span> });
+
+<span class="keyword">const</span> findLocalIncidents = <span class="keyword">async</span> (coords, maxMeters) =&gt; {
+  <span class="keyword">return</span> <span class="keyword">await</span> Incident.find({
+    location: {
+      $nearSphere: {
+        $geometry: { type: <span class="string">"Point"</span>, coordinates: coords },
+        $maxDistance: maxMeters
+      }
+    }
+  }).populate(<span class="string">"author"</span>, <span class="string">"name role"</span>);
+};</code></pre>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Sentinel Watch &mdash; Flood &amp; Landslide Alert Platform</h3>
+            <p class="project-summary">
+              A comprehensive MERN-stack disaster mitigation platform enabling rapid community incident reporting, 
+              role-based dispatch coordination, and real-time push broadcasts via WebSockets.
+            </p>
+
+            <ul class="project-highlights">
+              <li>
+                <strong>Geospatial Intelligence:</strong> Built MongoDB 2dsphere indexing and location-bounded queries to aggregate incident reports in affected zones.
+              </li>
+              <li>
+                <strong>Instant Dispatch:</strong> Integrated Socket.IO for sub-second incident alerts across citizen interfaces and emergency responder consoles.
+              </li>
+              <li>
+                <strong>Granular Security:</strong> Enforced Role-Based Access Control (RBAC) with JWT authentication for administrative verification.
+              </li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span>MongoDB</span>
+              <span>Express.js</span>
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Socket.IO</span>
+              <span>Geospatial GIS</span>
+            </div>
+
+            <div class="project-card-actions">
+              <button class="btn btn-sm btn-primary launch-modal-btn" data-modal="sentinel-watch">
+                <span>Launch Interactive Demo</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                <span>GitHub Source</span>
+                &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: CropFusion -->
+        <article class="project-card" data-category="aiml geospatial" data-project="cropfusion">
+          <div class="project-card-header">
+            <div class="project-type-tag">Precision AgTech &amp; Remote Sensing</div>
+            <div class="project-header-actions">
+              <div class="project-view-toggler">
+                <button class="view-tab-btn active" data-view="preview">Preview</button>
+                <button class="view-tab-btn" data-view="code">Code</button>
+              </div>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub" aria-label="CropFusion on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Preview View -->
+          <div class="project-visual-preview cropfusion-theme view-content-preview">
+            <div class="mock-ui-bar">
+              <span class="status-indicator-badge success-pill">SENTINEL-2 SPECTRAL FEED</span>
+              <span class="geo-tag">NDVI Index: 0.78 (Optimal)</span>
+            </div>
+            <div class="crop-yield-visual">
+              <div class="ndvi-spectrum-bar">
+                <span class="ndvi-fill" style="width: 78%;"></span>
+              </div>
+              <div class="crop-telemetry-row">
+                <div class="telemetry-chip">
+                  <span class="chip-val">94.2%</span>
+                  <span class="chip-label">Optimal Match</span>
+                </div>
+                <div class="telemetry-chip">
+                  <span class="chip-val">+18.5%</span>
+                  <span class="chip-label">Projected Yield</span>
+                </div>
+                <div class="telemetry-chip">
+                  <span class="chip-val">Paddy / Maize</span>
+                  <span class="chip-label">Top Recommendation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code View -->
+          <div class="project-code-preview view-content-code" style="display:none;">
+            <pre class="code-box"><code><span class="code-comment"># Sentinel-2 NDVI Computation (Band 8 NIR & Band 4 Red)</span>
+<span class="keyword">def</span> <span class="var-name">calculate_ndvi</span>(nir_band, red_band):
+    nir = nir_band.astype(np.float32)
+    red = red_band.astype(np.float32)
+    <span class="keyword">return</span> (nir - red) / (nir + red + 1e-8)
+
+<span class="keyword">def</span> <span class="var-name">predict_crop_suitability</span>(soil_vec, ndvi_score):
+    features = np.hstack([soil_vec, [ndvi_score]])
+    <span class="keyword">return</span> crop_model.predict_proba([features])[0]</code></pre>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">CropFusion &mdash; Agricultural AI &amp; Crop Yield Prediction</h3>
+            <p class="project-summary">
+              An AI-driven agricultural decision intelligence platform combining Copernicus Sentinel-2 multispectral satellite imagery, 
+              soil telemetry, and GIS layers to deliver localized crop recommendations and yield forecasting.
+            </p>
+
+            <ul class="project-highlights">
+              <li>
+                <strong>Satellite Remote Sensing:</strong> Ingests Sentinel-2 multispectral satellite tiles to derive vegetative indices (NDVI) and soil moisture signatures.
+              </li>
+              <li>
+                <strong>Predictive Machine Learning:</strong> Trains tabular and feature-engineered ML models served through high-performance REST APIs.
+              </li>
+              <li>
+                <strong>Interactive React Dashboard:</strong> Features clear charting and localized soil-weather intelligence tailored for agrarian stakeholders.
+              </li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Sentinel-2 Satellite</span>
+              <span>React</span>
+              <span>Flask REST API</span>
+              <span>GIS Analysis</span>
+            </div>
+
+            <div class="project-card-actions">
+              <button class="btn btn-sm btn-primary launch-modal-btn" data-modal="cropfusion">
+                <span>Launch Interactive Demo</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                <span>GitHub Source</span>
+                &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Fire & Smoke Detection -->
+        <article class="project-card" data-category="aiml" data-project="fire-smoke">
+          <div class="project-card-header">
+            <div class="project-type-tag">Deep Learning &amp; Computer Vision</div>
+            <div class="project-header-actions">
+              <div class="project-view-toggler">
+                <button class="view-tab-btn active" data-view="preview">Preview</button>
+                <button class="view-tab-btn" data-view="code">Code</button>
+              </div>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub" aria-label="Fire and Smoke Detection on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Preview View -->
+          <div class="project-visual-preview vision-theme view-content-preview">
+            <div class="mock-ui-bar">
+              <span class="status-indicator-badge fire-pill">RESNET-50 INFERENCE</span>
+              <span class="geo-tag">Latency: 28ms &middot; 30 FPS</span>
+            </div>
+            <div class="vision-feed-box">
+              <div class="scan-line"></div>
+              <div class="bounding-box fire-box">
+                <span class="box-tag">🔥 Fire: 98.4% Confidence</span>
+              </div>
+              <div class="bounding-box smoke-box">
+                <span class="box-tag">💨 Smoke Plume: 94.1%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code View -->
+          <div class="project-code-preview view-content-code" style="display:none;">
+            <pre class="code-box"><code><span class="code-comment"># ResNet-50 Transfer Learning Inference Endpoint</span>
+@app.route(<span class="string">"/api/v1/detect"</span>, methods=[<span class="string">"POST"</span>])
+<span class="keyword">def</span> <span class="var-name">detect_hazard</span>():
+    tensor = transform_image(request.files[<span class="string">"frame"</span>])
+    <span class="keyword">with</span> torch.no_grad():
+        logits = resnet_model(tensor.to(device))
+        probs = torch.softmax(logits, dim=1)[0]
+    <span class="keyword">return</span> jsonify({
+        <span class="string">"fire_confidence"</span>: float(probs[1]),
+        <span class="string">"smoke_confidence"</span>: float(probs[2]),
+        <span class="string">"alert"</span>: bool(probs[1] &gt; 0.85)
+    })</code></pre>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Fire &amp; Smoke Detection Web Application</h3>
+            <p class="project-summary">
+              A computer vision application integrating a fine-tuned ResNet-50 deep learning model into a Flask web application, 
+              delivering ultra-fast inference on images, uploaded videos, and live webcam feeds.
+            </p>
+
+            <ul class="project-highlights">
+              <li>
+                <strong>Deep Residual Architecture:</strong> Utilized PyTorch and transfer learning on ResNet-50 CNN to accurately discriminate hazard anomalies under varied lighting conditions.
+              </li>
+              <li>
+                <strong>Multi-Modal Ingestion:</strong> Exposed REST endpoints accepting static photos, multi-frame video uploads, and live webcam streams.
+              </li>
+              <li>
+                <strong>Real-Time Thresholding:</strong> Implemented dynamic confidence thresholding to prevent false alarms while maintaining high sensitivity.
+              </li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span>PyTorch</span>
+              <span>ResNet-50</span>
+              <span>Computer Vision</span>
+              <span>Flask</span>
+              <span>OpenCV</span>
+              <span>REST APIs</span>
+            </div>
+
+            <div class="project-card-actions">
+              <button class="btn btn-sm btn-primary launch-modal-btn" data-modal="fire-smoke">
+                <span>Launch Interactive Demo</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                <span>GitHub Source</span>
+                &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: WaterMan -->
+        <article class="project-card" data-category="fullstack" data-project="waterman">
+          <div class="project-card-header">
+            <div class="project-type-tag">Enterprise Resource Management</div>
+            <div class="project-header-actions">
+              <div class="project-view-toggler">
+                <button class="view-tab-btn active" data-view="preview">Preview</button>
+                <button class="view-tab-btn" data-view="code">Code</button>
+              </div>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub" aria-label="WaterMan on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Preview View -->
+          <div class="project-visual-preview waterman-theme view-content-preview">
+            <div class="mock-ui-bar">
+              <span class="status-indicator-badge water-pill">ORACLE DB INTEGRATION</span>
+              <span class="geo-tag">Conservation Savings: 32.4%</span>
+            </div>
+            <div class="water-meters-row">
+              <div class="water-meter">
+                <span class="meter-num">1,420 L</span>
+                <span class="meter-desc">Current Month Usage</span>
+              </div>
+              <div class="water-meter green-highlight">
+                <span class="meter-num">-480 L</span>
+                <span class="meter-desc">Efficiency Savings</span>
+              </div>
+              <div class="water-meter">
+                <span class="meter-num">Normal</span>
+                <span class="meter-desc">Leak Anomaly Status</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code View -->
+          <div class="project-code-preview view-content-code" style="display:none;">
+            <pre class="code-box"><code><span class="code-comment">-- Oracle Database Tiered Billing & Anomaly Detection</span>
+CREATE OR REPLACE PROCEDURE calculate_water_tier(
+  p_meter_id IN NUMBER,
+  p_units    IN NUMBER,
+  p_bill_amt OUT NUMBER
+) AS
+BEGIN
+  IF p_units &lt;= 1000 THEN
+    p_bill_amt := p_units * 0.05;
+  ELSE
+    p_bill_amt := (1000 * 0.05) + ((p_units - 1000) * 0.09);
+  END IF;
+END;</code></pre>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">WaterMan &mdash; Water Conservation Management System</h3>
+            <p class="project-summary">
+              A full-stack enterprise web application designed for comprehensive municipal or institutional water consumption tracking, 
+              automated tiered billing, and proactive conservation guidance.
+            </p>
+
+            <ul class="project-highlights">
+              <li>
+                <strong>Relational Data Architecture:</strong> Engineered a robust Oracle Database schema with ACID compliance for transactions, meter telemetry, and consumer billing.
+              </li>
+              <li>
+                <strong>Automated Alerts &amp; Audits:</strong> Formulated anomaly detection routines to pinpoint flow spikes, potential pipeline bursts, and overconsumption.
+              </li>
+              <li>
+                <strong>Conservation Guidance:</strong> Integrated recommendations based on historical usage curves to help consumers curtail water waste.
+              </li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>Oracle Database</span>
+              <span>SQL</span>
+              <span>REST APIs</span>
+            </div>
+
+            <div class="project-card-actions">
+              <button class="btn btn-sm btn-primary launch-modal-btn" data-modal="waterman">
+                <span>Launch Interactive Demo</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+              <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                <span>GitHub Source</span>
+                &rarr;
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Technical Competencies</div>
+        <h2 class="section-title">My Tech Stack &amp; Toolkit</h2>
+        <p class="section-desc">
+          A balanced foundation spanning web engineering, machine learning pipelines, cloud services, and database management. 
+          Use the quick filter below to highlight specific skill clusters.
+        </p>
+
+        <!-- Skill Quick Search / Filter Pills -->
+        <div class="skill-filter-pills">
+          <button class="skill-filter-btn active" data-skill-cat="all">All Skills</button>
+          <button class="skill-filter-btn" data-skill-cat="web">Web &amp; APIs</button>
+          <button class="skill-filter-btn" data-skill-cat="ai">AI / Vision</button>
+          <button class="skill-filter-btn" data-skill-cat="data">Data &amp; Cloud</button>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1: Languages -->
+        <div class="skill-category-card" data-cat="lang">
+          <div class="cat-header">
+            <div class="cat-icon code-color">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3>Core Languages</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-name">Python</span><span class="chip-level">Proficient</span></div>
+            <div class="skill-chip"><span class="chip-name">JavaScript (ES6+)</span><span class="chip-level">Proficient</span></div>
+            <div class="skill-chip"><span class="chip-name">SQL</span><span class="chip-level">Advanced</span></div>
+            <div class="skill-chip"><span class="chip-name">C / C++</span><span class="chip-level">Solid</span></div>
+            <div class="skill-chip"><span class="chip-name">Java</span><span class="chip-level">Academic</span></div>
+            <div class="skill-chip"><span class="chip-name">R</span><span class="chip-level">Data Viz</span></div>
+          </div>
+        </div>
+
+        <!-- Category 2: Web & Backend -->
+        <div class="skill-category-card" data-cat="web">
+          <div class="cat-header">
+            <div class="cat-icon web-color">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3>Web &amp; Backend</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-name">React.js</span><span class="chip-level">Components &amp; Hooks</span></div>
+            <div class="skill-chip"><span class="chip-name">Node.js</span><span class="chip-level">Runtime</span></div>
+            <div class="skill-chip"><span class="chip-name">Express.js</span><span class="chip-level">RESTful APIs</span></div>
+            <div class="skill-chip"><span class="chip-name">Flask</span><span class="chip-level">Microservices</span></div>
+            <div class="skill-chip"><span class="chip-name">Socket.IO</span><span class="chip-level">WebSockets</span></div>
+            <div class="skill-chip"><span class="chip-name">HTML5 / CSS3</span><span class="chip-level">Responsive Design</span></div>
+          </div>
+        </div>
+
+        <!-- Category 3: AI & Machine Learning -->
+        <div class="skill-category-card" data-cat="ai">
+          <div class="cat-header">
+            <div class="cat-icon ai-color">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 3.36 2.07 6.24 5 7.42V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.58c2.93-1.18 5-4.06 5-7.42a8 8 0 0 0-8-8z"></path></svg>
+            </div>
+            <h3>AI, ML &amp; Vision</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-name">PyTorch</span><span class="chip-level">Deep Learning</span></div>
+            <div class="skill-chip"><span class="chip-name">ResNet-50 &amp; CNNs</span><span class="chip-level">Classification</span></div>
+            <div class="skill-chip"><span class="chip-name">Computer Vision</span><span class="chip-level">OpenCV &amp; Frames</span></div>
+            <div class="skill-chip"><span class="chip-name">Sentinel-2 Imagery</span><span class="chip-level">Remote Sensing</span></div>
+            <div class="skill-chip"><span class="chip-name">Tabular ML</span><span class="chip-level">Prediction</span></div>
+            <div class="skill-chip"><span class="chip-name">Cursor AI</span><span class="chip-level">Agentic Workflows</span></div>
+          </div>
+        </div>
+
+        <!-- Category 4: Databases, Cloud & DevOps -->
+        <div class="skill-category-card" data-cat="data">
+          <div class="cat-header">
+            <div class="cat-icon db-color">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <h3>Databases &amp; Cloud</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-name">MongoDB</span><span class="chip-level">Geospatial 2dsphere</span></div>
+            <div class="skill-chip"><span class="chip-name">MySQL</span><span class="chip-level">Relational Modeling</span></div>
+            <div class="skill-chip"><span class="chip-name">Oracle Database</span><span class="chip-level">Enterprise Schema</span></div>
+            <div class="skill-chip"><span class="chip-name">Git &amp; GitHub</span><span class="chip-level">Version Control</span></div>
+            <div class="skill-chip"><span class="chip-name">IBM Cloud &amp; Serverless</span><span class="chip-level">Cloud Functions</span></div>
+            <div class="skill-chip"><span class="chip-name">Microsoft Azure</span><span class="chip-level">Cloud Essentials</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Timeline Section -->
+  <section class="section timeline-section" id="experience">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Career Milestones</div>
+        <h2 class="section-title">Experience &amp; Academic Path</h2>
+        <p class="section-desc">
+          Proven consistency in engineering internships, technical coursework, and software deliverables.
+        </p>
+      </div>
+
+      <div class="timeline-wrapper">
+
+        <!-- Timeline 1: Internship -->
+        <div class="timeline-item">
+          <div class="timeline-dot-container">
+            <div class="timeline-dot internship-dot"></div>
+          </div>
+          <div class="timeline-content-card">
+            <div class="timeline-card-header">
+              <div>
+                <span class="timeline-category badge-intern">Internship</span>
+                <h3 class="timeline-role">Full Stack Development Intern</h3>
+                <h4 class="timeline-org">CodeLab Systems &middot; Mangaluru</h4>
+              </div>
+              <span class="timeline-period">2 Jan 2024 &ndash; 23 Apr 2024 (16 Weeks)</span>
+            </div>
+            <p class="timeline-body">
+              Completed an intensive 16-week full-stack development internship with commended commitment and contributions. 
+              Worked directly across frontend interfaces and backend workflows, architected REST endpoints, and integrated client-server data streams.
+            </p>
+            <div class="timeline-chips">
+              <span>Full-Stack Workflows</span>
+              <span>API Integration</span>
+              <span>Collaborative Git</span>
+              <span>Component Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline 2: Degree Education -->
+        <div class="timeline-item">
+          <div class="timeline-dot-container">
+            <div class="timeline-dot edu-dot"></div>
+          </div>
+          <div class="timeline-content-card">
+            <div class="timeline-card-header">
+              <div>
+                <span class="timeline-category badge-edu">Undergraduate Degree</span>
+                <h3 class="timeline-role">B.E. in Computer Science &amp; Engineering</h3>
+                <h4 class="timeline-org">Sahyadri College of Engineering &amp; Management, Mangaluru</h4>
+              </div>
+              <span class="timeline-period">2024 &ndash; Expected 2027</span>
+            </div>
+            <p class="timeline-body">
+              Admitted via lateral entry into CSE. Maintained a cumulative CGPA of <strong>8.23 / 10</strong> through the 6th semester with continuous &gt;8.0 CGPA performance. 
+              Awarded top <strong>Grade 'O'</strong> in B.E. Mini-Project Work and in UI/UX Design coursework.
+            </p>
+            <div class="coursework-highlights">
+              <strong>Key Coursework:</strong> Data Structures &amp; Applications, Design &amp; Analysis of Algorithms, Machine Learning &amp; Applications, Operating Systems, DBMS, Computer Networks, UI/UX Design, Web Technology.
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline 3: Diploma Education -->
+        <div class="timeline-item">
+          <div class="timeline-dot-container">
+            <div class="timeline-dot diploma-dot"></div>
+          </div>
+          <div class="timeline-content-card">
+            <div class="timeline-card-header">
+              <div>
+                <span class="timeline-category badge-diploma">Technical Diploma</span>
+                <h3 class="timeline-role">Diploma in Computer Science &amp; Engineering</h3>
+                <h4 class="timeline-org">Vivekananda Polytechnic, Puttur</h4>
+              </div>
+              <span class="timeline-period">2021 &ndash; 2024</span>
+            </div>
+            <p class="timeline-body">
+              Graduated with <strong>First Class With Distinction</strong> (CGPA: 8.21 / 10). Completed the final capstone semester with a 
+              <strong>perfect 10.0 SGPA</strong> for the internship/project (Grade A+).
+            </p>
+            <div class="timeline-chips">
+              <span>Distinction Graduate</span>
+              <span>10.0 SGPA Capstone</span>
+              <span>Full Stack Development</span>
+              <span>Algorithms &amp; OOP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Accolades Section -->
+  <section class="section certs-section" id="certifications">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Continuous Learning</div>
+        <h2 class="section-title">Certifications &amp; Credentials</h2>
+        <p class="section-desc">
+          Industry-recognized certifications in DevOps, cloud systems, artificial intelligence, and database technologies.
+        </p>
+      </div>
+
+      <div class="certs-grid">
+        <!-- Cert 1: IBM DevOps -->
+        <div class="cert-card">
+          <div class="cert-badge-top">
+            <span class="cert-issuer">IBM / Cognitive Class</span>
+            <span class="cert-validity">Valid thru Jul 2026</span>
+          </div>
+          <h3 class="cert-name">IBM DevOps and Software Engineering Professional Certificate</h3>
+          <p class="cert-summary">Comprehensive credential covering CI/CD pipelines, test-driven development, agile methodologies, and containerized deployment.</p>
+          <div class="cert-tags">
+            <span>DevOps</span>
+            <span>Agile &amp; CI/CD</span>
+            <span>Software Engineering</span>
+          </div>
+        </div>
+
+        <!-- Cert 2: AI Agents / Cursor -->
+        <div class="cert-card">
+          <div class="cert-badge-top">
+            <span class="cert-issuer">Cursor AI Certificate</span>
+            <span class="cert-validity">Completion</span>
+          </div>
+          <h3 class="cert-name">Cursor 101: Run AI Agents That Actually Ship Code</h3>
+          <p class="cert-summary">Hands-on mastery of autonomous agent workflows, prompt-driven code refactoring, context pinning, and shipping production software.</p>
+          <div class="cert-tags">
+            <span>AI Agents</span>
+            <span>Agentic Coding</span>
+            <span>Rapid Shipping</span>
+          </div>
+        </div>
+
+        <!-- Cert 3: Cloud Credentials -->
+        <div class="cert-card">
+          <div class="cert-badge-top">
+            <span class="cert-issuer">Multi-Cloud Suite</span>
+            <span class="cert-validity">Certified</span>
+          </div>
+          <h3 class="cert-name">IBM Cloud &amp; Microsoft Azure Essentials</h3>
+          <p class="cert-summary">Covering IBM Cloud Essentials, Serverless Computing with Cloud Functions, Microsoft Azure Essentials, and Oracle Cloud Infrastructure fundamentals.</p>
+          <div class="cert-tags">
+            <span>Serverless Functions</span>
+            <span>Azure Cloud</span>
+            <span>IBM Cloud</span>
+          </div>
+        </div>
+
+        <!-- Cert 4: AI & Security -->
+        <div class="cert-card">
+          <div class="cert-badge-top">
+            <span class="cert-issuer">Oracle &amp; Cognitive Class</span>
+            <span class="cert-validity">Verified</span>
+          </div>
+          <h3 class="cert-name">Oracle AI &amp; Python Data Science Foundations</h3>
+          <p class="cert-summary">Oracle AI for You, Python 101 for Data Science, Oracle SQL &amp; Database Essentials, and IT Security Foundations: Network Security.</p>
+          <div class="cert-tags">
+            <span>Oracle AI</span>
+            <span>Data Science</span>
+            <span>Network Security</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal Drawer / Modal -->
+  <div class="terminal-modal" id="terminalModal" role="dialog" aria-modal="true" aria-labelledby="terminalTitle">
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <div class="term-left">
+          <span class="term-dot red" id="closeTermBtn" title="Close CLI"></span>
+          <span class="term-dot yellow"></span>
+          <span class="term-dot green"></span>
+          <span class="term-title" id="terminalTitle">brijesh@portfolio: ~ (bash)</span>
+        </div>
+        <div class="term-actions">
+          <button class="term-action-btn" id="clearTermBtn">Clear</button>
+          <button class="term-action-btn" id="exitTermBtn">&times;</button>
+        </div>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div class="term-line output">
+          <span class="term-highlight">Welcome to Brijesh Vishwakarma's Interactive Terminal CLI!</span><br>
+          Type <span class="term-cmd">help</span> to list available commands, or click any quick pill below.
+        </div>
+        <div class="term-pills">
+          <button class="term-pill" data-run="about">about</button>
+          <button class="term-pill" data-run="projects">projects</button>
+          <button class="term-pill" data-run="skills">skills</button>
+          <button class="term-pill" data-run="contact">contact</button>
+          <button class="term-pill" data-run="hire">hire</button>
+          <button class="term-pill" data-run="clear">clear</button>
+        </div>
+        <div class="term-history" id="termHistory"></div>
+        <div class="term-input-row">
+          <span class="term-prompt">brijesh$</span>
+          <input type="text" id="termInput" class="term-input" autocomplete="off" spellcheck="false" placeholder="type a command...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Project Simulator Modals -->
+  <div class="project-modal-backdrop" id="projectModalBackdrop">
+    <div class="project-modal-window" id="projectModalWindow">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="modal-chip" id="modalTag">Simulation</span>
+          <h3 id="modalTitle">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="closeProjectModal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Dynamic Interactive Content Injected by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Resume View Modal (New Enhancement) -->
+  <div class="resume-modal-backdrop" id="resumeModalBackdrop">
+    <div class="resume-modal-window">
+      <div class="resume-modal-header">
+        <div class="res-title-group">
+          <h3>Brijesh Vishwakarma &mdash; Resume Snapshot</h3>
+          <span>Computer Science Engineering &middot; Lateral Entry &middot; CGPA 8.23</span>
+        </div>
+        <div class="res-actions">
+          <button class="btn btn-sm btn-primary" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close-btn" id="closeResumeModal">&times;</button>
+        </div>
+      </div>
+      <div class="resume-modal-body">
+        <div class="resume-sheet">
+          <div class="res-sheet-header">
+            <h4>BRIJESH VISHWAKARMA</h4>
+            <p>Puttur, Karnataka, India &middot; +91 9110463601 &middot; brijesh2005.28@gmail.com</p>
+            <p>linkedin.com/in/brijesh-vishwakarma-72b043313 &middot; github.com/Brijesh2005</p>
+          </div>
+          <hr class="res-divider">
+          <div class="res-sheet-sec">
+            <h5>PROFESSIONAL SUMMARY</h5>
+            <p>Computer Science Engineering student (CGPA 8.23) with a full-stack internship and four end-to-end projects spanning MERN-stack web apps, REST APIs, SQL/NoSQL databases, and deep-learning inference. Experienced in taking ideas from data and models to working, user-facing applications in agriculture, disaster response, and safety. Seeking a software development internship or entry-level role.</p>
+          </div>
+          <div class="res-sheet-sec">
+            <h5>EDUCATION</h5>
+            <p><strong>B.E. in Computer Science &amp; Engineering</strong> &mdash; Sahyadri College of Eng. &amp; Mgmt (2024 &ndash; Expected 2027) &middot; CGPA: 8.23 / 10</p>
+            <p><strong>Diploma in Computer Science &amp; Engineering</strong> &mdash; Vivekananda Polytechnic, Puttur (2021 &ndash; 2024) &middot; CGPA: 8.21 / 10 (Distinction, 10.0 SGPA Capstone)</p>
+          </div>
+          <div class="res-sheet-sec">
+            <h5>EXPERIENCE</h5>
+            <p><strong>Full Stack Development Intern</strong> &mdash; CodeLab Systems, Mangaluru (2 Jan 2024 &ndash; 23 Apr 2024)<br>Completed 16-week full-stack internship; commended for significant contribution and commitment.</p>
+          </div>
+          <div class="res-sheet-sec">
+            <h5>FOUR CORE PROJECTS</h5>
+            <p>&bull; <strong>Sentinel Watch:</strong> MERN-stack community flood &amp; landslide reporting with MongoDB 2dsphere and Socket.IO real-time alerts.</p>
+            <p>&bull; <strong>CropFusion:</strong> Agricultural AI crop recommendation combining weather, soil telemetry, and Sentinel-2 satellite imagery.</p>
+            <p>&bull; <strong>Fire &amp; Smoke Detection:</strong> Fine-tuned PyTorch ResNet-50 computer vision pipeline with Flask REST endpoints for live webcam frames.</p>
+            <p>&bull; <strong>WaterMan:</strong> Enterprise water consumption tracking, conservation savings, and billing backed by Oracle Database schema.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact & Get In Touch Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card-wrapper">
+        <div class="contact-left">
+          <div class="section-tag">Let's Connect</div>
+          <h2 class="contact-title">Let's Build Something Exceptional Together.</h2>
+          <p class="contact-subtitle">
+            Whether you are looking for a dedicated software engineering intern, a full-stack MERN developer, 
+            or an engineer experienced in AI inference and GIS, my inbox is always open.
+          </p>
+
+          <div class="contact-quick-list">
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Direct Email</span>
+                <span class="info-val">brijesh2005.28@gmail.com</span>
+              </div>
+              <button class="btn-copy-small" data-copy="brijesh2005.28@gmail.com" title="Copy email">Copy</button>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Phone</span>
+                <span class="info-val">+91 9110463601</span>
+              </div>
+              <button class="btn-copy-small" data-copy="+919110463601" title="Copy phone number">Copy</button>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="10" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Location</span>
+                <span class="info-val">Puttur, Karnataka, India (Open to Remote &amp; Relocation)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links-row">
+            <a href="https://github.com/Brijesh2005" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/brijesh-vishwakarma-72b043313" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="interactive-contact-form" id="contactForm">
+            <h3 class="form-title">Send a Direct Message</h3>
+            
+            <div class="form-group">
+              <label for="senderName">Your Name</label>
+              <input type="text" id="senderName" name="name" required placeholder="Alex Rivera" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail">Your Email</label>
+              <input type="email" id="senderEmail" name="email" required placeholder="alex@company.com" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="senderSubject">Subject / Opportunity</label>
+              <input type="text" id="senderSubject" name="subject" required placeholder="Full Stack Internship / Project Collaboration">
+            </div>
+
+            <div class="form-group">
+              <label for="senderMessage">Message</label>
+              <textarea id="senderMessage" name="message" rows="4" required placeholder="Hi Brijesh, I came across your portfolio and wanted to discuss an opportunity..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+              <span class="btn-text">Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Brijesh Vishwakarma</span>
+        <span class="footer-copy">&copy; 2026. Designed with modern light aesthetics &amp; high-performance animations.</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JavaScript Script -->
+  <script src="script.js"></script>
+</body>
+</html>
