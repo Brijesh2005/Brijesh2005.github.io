@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModals();
   initProjectViewTogglers();
   initSkillCategoryFilter();
+  initCertFilters();
   initAccentPalette();
   initAudioSystem();
   initLiveClockIST();
@@ -407,6 +408,37 @@ function initSkillCategoryFilter() {
         } else {
           card.style.opacity = '0.35';
           card.style.transform = 'scale(0.98)';
+        }
+      });
+    });
+  });
+}
+
+function initCertFilters() {
+  const buttons = document.querySelectorAll('.cert-filter-btn');
+  const cards = document.querySelectorAll('.certs-grid .cert-card');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      playTone(500, 'sine', 0.06);
+
+      const cat = btn.getAttribute('data-cert-cat');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-cert-cat');
+        if (cat === 'all' || cardCat === cat) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
+          }, 40);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px) scale(0.96)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 200);
         }
       });
     });
@@ -914,12 +946,12 @@ View GitHub: <a href="https://github.com/Brijesh2005" target="_blank" style="col
     `,
 
     certs: () => `
-<span class="term-highlight">Certifications:</span>
-&bull; IBM DevOps and Software Engineering Professional Certificate
-&bull; Cursor 101: Run AI Agents That Actually Ship Code
-&bull; IBM Cloud Essentials & Serverless Functions
-&bull; Microsoft Azure Essentials & Oracle Cloud Infrastructure
-&bull; Oracle AI for You & Python 101 for Data Science
+<span class="term-highlight">Verified Industry Credentials (20):</span>
+&bull; <strong>AI & Agents:</strong> Cursor 101 AI Agents, Decision Trees Python, Oracle AI for You, Python for Data Science
+&bull; <strong>Cloud & Serverless:</strong> AWS Cloud Practitioner Essentials, IBM Intro to Cloud (CC0101EN), IBM Serverless Cloud Functions (CC0210EN), Microsoft Azure Essentials, Oracle Cloud Infrastructure
+&bull; <strong>Testing & Agile:</strong> Infosys TechA Testing Fundamentals, Agile Scrum Certification, Agile Scrum in Practice, Software Engineering & Agile, IBM DevOps Professional Certificate
+&bull; <strong>Core Systems:</strong> Java Programming, Basics of Python, DBMS Part-1, IoT Foundation, HTML5 - The Language, Oracle SQL Essentials
+&bull; <strong>Research:</strong> 2027 ICAI-SEES Paper #195, 2026 ICWIC Paper #631 (Microsoft CMT)
     `,
 
     contact: () => `
